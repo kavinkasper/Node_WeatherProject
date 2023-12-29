@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Wisdom: Your Instant Forecast Hub</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Times New Roman", Times, serif;
+        background: rgb(238, 239, 240);
+        background: radial-gradient(
+          circle,
+          rgba(238, 239, 240, 1) 0%,
+          rgba(148, 155, 153, 1) 69%,
+          rgba(148, 152, 150, 1) 100%
+        );
+      }
+      h1 {
+        background-color: #333;
+        margin-top: auto;
+        padding: 10px;
+        text-align: center;
+        color: white;
+        font-style: italic;
+        font-weight: bold;
+      }
+
+      #weather-data {
+        width: 30%;
+        margin-top: 5%;
+        margin-left: 34%;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 1px 20px 1px rgba(25, 146, 246, 0.3);
+      }
+      h2 {
+        color: #333;
+        font-style: italic;
+      }
+      p {
+        margin: 5px 0;
+        text-align: center;
+        font-size: larger;
+        padding-bottom: 10px;
+      }
+      .button {
+        padding: 12px;
+        border-radius: 25px;
+        margin-left: -7%;
+        background-color: rgb(234, 117, 75);
+        border: 5px solid rgb(234, 117, 75);
+        color: white;
+        font-weight: bold;
+      }
+      .locationInput {
+        padding: 12px;
+        border-radius: 25px;
+        width: 20%;
+        border: 5px solid rgb(234, 117, 75);
+      }
+      .weatherForm {
+        text-align: center;
+        margin-top: 5%;
+      }
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .heart {
+        color: red;
+      }
+    </style>
+  </head>
+  <body> 
+    <header>
+      <h1>Weather Wisdom: Your Instant Forecast Hub</h1>
+    </header>
+    <main>
+      <form class="weatherForm" action="/getWeather" method="get">
+        <input
+          type="text"
+          class="locationInput"
+          name="location"
+          placeholder="e.g., London"
+        />
+        <button class="button" type="submit">Get Weather</button>
+      </form>
+
+      <div id="weather-data">
+        <p><b>Location:</b> [Location]</p>
+        <p>
+          <b>Temperature:</b>
+          <span style="color: red">[Temperature]</span>
+        </p>
+        <p><b>Weather:</b> [Weather]</p>
+        <p><b>Wind:</b>[Wind]</p>
+        <p><b>Humidity:</b> [Humidity]</p>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2023 Weather Wisdom...</p>
+        <p>
+          Designed with <span class="heart">&#10084;</span> by Kavin Kumar S
+        </p>
+      </div>
+    </footer>
+
+    <script src="./index.js" type="text/javascript"></script>
+  </body>
+</html>
