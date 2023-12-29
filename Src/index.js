@@ -3,7 +3,6 @@ const { WeatherTemplate } = require("./Handlers/Weatherhandlers.js");
 const app = express();
 
 const portNumber = 3500;
-app.use(express.static('public')); 
 
 // when the page loads it will defaultly show the weather report of New York location and here no request is given
 app.get("/", async (req, res) => {
